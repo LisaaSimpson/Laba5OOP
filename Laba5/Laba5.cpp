@@ -41,7 +41,7 @@ public:
 
 	void ResetRectangle();
 
-	~Rectangle() {
+	virtual ~Rectangle() {
 		printf("Вызвался деструктор класса Rectangle\n");
 		printf("Стороны прямоугольника = %d %d\n\n", coordX, coordY);
 	}
@@ -109,6 +109,11 @@ int main()
 	//вызов виртуального метода
 	rtg->ShowCoords();
 	prl->ShowCoords();
+
+	//вызов виртуального деструктора
+	Parallelepiped* prl1 = new Parallelepiped(6, 4, 5);
+	Rectangle* rtg1 = prl1;
+	delete rtg1;
 
 	delete rtg;
 	delete prl;
