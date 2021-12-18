@@ -70,12 +70,14 @@ Base& func33(Base& obj) {
 
 int main()
 {
+	//создание unique_ptr
 	{
 		unique_ptr<Base> unq(new Desc());
 	}
 
 	printf("\n\n");
 
+	//создание shared_ptr
 	Base* j = new Desc();
 	shared_ptr<Base> p1(j);
 	{
