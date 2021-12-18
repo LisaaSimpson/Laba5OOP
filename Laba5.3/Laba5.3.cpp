@@ -68,13 +68,14 @@ Base& func33(Base& obj) {
 
 int main()
 {
+	//проверка функций для класса Base
 	Base* base = new Base();
 	func1(base);
 	func2(base);
 	func3(*base);
 	printf("\n\n");
 
-
+	//проверка функций для класса Desc
 	Desc* desc = new Desc();
 	func1(*desc);
 	func2(desc);
@@ -82,6 +83,7 @@ int main()
 	delete desc;
 	printf("\n\n");
 
+	//проверка механизма возврата объектов
 	func11(*base);
 	func22(base);
 	func33(*base);
